@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 	"encoding/xml"
+	"github.com/ChangjunZhao/protobuf-test/user"
 	"github.com/golang/protobuf/proto"
-	"github.com/venusource/protocdemo/user"
 	"io/ioutil"
 	"log"
 	"net/http"
