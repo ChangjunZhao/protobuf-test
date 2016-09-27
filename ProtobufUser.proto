@@ -14,7 +14,7 @@ message ProtobufUser {
     OTHER = 2;
   }
   PhoneType phoneType = 1;
-  string PhoneNumber = 2;
+  string phoneNumber = 2;
   }
 
   repeated Phone phones = 3;
