@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "user";
+option java_package = "com.venusource.protobuf";
+
+message ProtobufUser {
+  int32 id = 1;
+  string name = 2;
+
+  message Phone{
+  enum PhoneType {
+    HOME = 0;
+    WORK = 1;
+    OTHER = 2;
+  }
+  PhoneType phoneType = 1;
+  string PhoneNumber = 2;
+  }
+
+  repeated Phone phones = 3;
+}

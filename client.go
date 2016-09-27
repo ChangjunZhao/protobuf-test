@@ -21,7 +21,7 @@ func requestProtoc() {
 	if err != nil {
 		log.Println(err)
 	}
-	t := &user.ProtocUser{}
+	t := &user.ProtobufUser{}
 	proto.Unmarshal(data, t)
 }
 
