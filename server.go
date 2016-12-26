@@ -39,7 +39,7 @@ func main() {
 }
 
 func testProtobuf(rw http.ResponseWriter, req *http.Request) {
-	t := &user.ProtobufUser{Id: 1, Name: "cjzhao", Phones: []*user.ProtobufUser_Phone{{PhoneType: user.ProtobufUser_Phone_HOME, PhoneNumber: "01080308438"}, {PhoneType: user.ProtobufUser_Phone_WORK, PhoneNumber: "15517684328"}}}
+	t := &user.ProtobufUser{Id: 1, Name: "cjzhao", Phones: []*user.ProtobufUser_Phone{{PhoneType: user.PhoneType_HOME, PhoneNumber: "01080308438"}, {PhoneType: user.PhoneType_WORK, PhoneNumber: "15517684328"}}}
 	data, err := proto.Marshal(t)
 	if err != nil {
 		log.Fatal("marshaling error: ", err)
